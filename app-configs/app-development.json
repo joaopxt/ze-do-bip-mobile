@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "Zé do Bip - DEV",
+    "slug": "ze-do-beep-dev",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "zedobeep-dev",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1e40af"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.grupobueno.zedobip.dev"
+    },
+    "android": {
+      "package": "com.grupobueno.zedobip.dev",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#1e40af"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      ["expo-splash-screen", {
+        "image": "./assets/images/splash-icon.png",
+        "imageWidth": 200,
+        "resizeMode": "contain",
+        "backgroundColor": "#1e40af"
+      }],
+      ["expo-camera", {
+        "cameraPermission": "Permitir acesso à câmera para escanear códigos de barras"
+      }],
+      ["expo-location", {
+        "locationAlwaysAndWhenInUsePermission": "Permitir acesso à localização para validar área de operação"
+      }]
+    ],
+    "extra": {
+      "environment": "development",
+      "buildEnvironment": "development",
+      "eas": {
+        "projectId": "0aba7cc6-544f-485c-a809-ae651fc5d27d"
+      }
+    }
+  }
+}

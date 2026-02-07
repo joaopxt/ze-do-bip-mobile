@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="beamFade" x1="0%" y1="50%" x2="100%" y2="50%" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#CDDC39" stop-opacity="0.8"/>
+            <stop offset="90%" stop-color="#CDDC39" stop-opacity="0.1"/>
+        </linearGradient>
+    </defs>
+
+    <rect width="512" height="512" rx="100" fill="#008F7A"/>
+
+    <g transform="translate(-20, -30)">
+        <g transform="translate(260, 100)">
+            <rect x="0" y="0" width="150" height="150" rx="10" stroke="#263238" stroke-width="12"/>
+            <path d="M45 0V25L75 45L105 25V0" fill="#263238"/>
+            <g transform="translate(30, 55)">
+                <rect x="0" width="5" height="75" fill="white"/>
+                <rect x="10" width="9" height="75" fill="#CDDC39"/>
+                <rect x="24" width="4" height="75" fill="white"/>
+                <rect x="33" width="13" height="75" fill="#CDDC39"/>
+                <rect x="51" width="7" height="75" fill="white"/>
+                <rect x="63" width="11" height="75" fill="#CDDC39"/>
+                <rect x="79" width="5" height="75" fill="white"/>
+            </g>
+        </g>
+
+        <path d="M215 205 L 260 135 L 410 135 L 410 260 L 260 260 Z" fill="url(#beamFade)"/>
+
+        <g transform="translate(70, 180)">
+            <path d="M140 20 L 55 35 C 25 40 10 65 10 95 V 185 C 10 205 25 220 45 220 H 65 C 80 220 90 210 90 195 V 135 C 90 115 105 105 125 105 H 140 V 20 Z" fill="#263238"/>
+            <path d="M135 15 L 155 15 L 165 30 L 165 95 L 155 110 L 135 110 C 125 110 120 105 120 95 L 120 30 C 120 20 125 15 135 15 Z" fill="#263238"/>
+            <path d="M85 135 C 75 135 70 145 70 155 V 175 C 70 185 75 195 85 195" stroke="#37474F" stroke-width="8" stroke-linecap="round"/>
+            <path d="M55 220 V 245 C 55 255 45 265 35 265" stroke="#263238" stroke-width="10" stroke-linecap="round"/>
+        </g>
+    </g>
+
+    <g transform="translate(290, 350)">
+        <text x="0" y="0" text-anchor="middle" fill="#263238" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="55">ZÉ DO</text>
+
+        <text x="0" y="95" text-anchor="middle" fill="#CDDC39" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="115">BIP</text>
+
+        <g transform="translate(105, 35)" stroke="#CDDC39" stroke-width="8" stroke-linecap="round">
+            <path d="M0 10 C 15 25, 15 45, 0 60"/>
+            <path d="M20 0 C 45 25, 45 60, 20 85"/>
+        </g>
+    </g>
+</svg>
