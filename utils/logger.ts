@@ -1,5 +1,5 @@
 /**
- * Sistema de Logging Centralizado - Zé do Bip
+ * Sistema de Logging Centralizado - Zé da Entrega
  * 
  * Logs são exibidos APENAS em desenvolvimento (__DEV__)
  * Em produção, apenas erros críticos são logados

@@ -1,5 +1,5 @@
 /**
- * Sistema de Migrations - Zé do Bip
+ * Sistema de Migrations - Zé da Entrega
  * Gerencia versões do schema do banco de dados
  */
 
@@ -8,12 +8,14 @@ import { Logger } from "../../utils/logger";
 import { migration001Initial } from "./001_initial";
 import { migration002SyncQueue } from "./002_sync_queue";
 import { migration003AuthPermissions } from "./003_auth_permissions";
+import { migration004Entrega } from "./004_entrega";
 
 // Lista de migrations em ordem
 const migrations = [
   { version: 1, name: "001_initial", run: migration001Initial },
   { version: 2, name: "002_sync_queue", run: migration002SyncQueue },
   { version: 3, name: "003_auth_permissions", run: migration003AuthPermissions },
+  { version: 4, name: "004_entrega", run: migration004Entrega },
 ];
 
 /**

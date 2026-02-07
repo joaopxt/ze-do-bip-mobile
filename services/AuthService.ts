@@ -1,5 +1,5 @@
 /**
- * Authentication Service - Zé do Bip v4.0
+ * Authentication Service - Zé da Entrega v1.0
  * Apenas chamadas HTTP para autenticação (persistência movida para SQLite via AuthRepository)
  */
 
@@ -89,13 +89,13 @@ class AuthService {
 
   /**
    * Obtém o User-Agent dinâmico com cd_usuario
-   * Formato: ZeDoBip-Mobile/4.0 (user:123)
+   * Formato: ZeDaEntrega-Mobile/1.0 (user:123)
    */
   private getUserAgent(): string {
     if (this.currentUser) {
-      return `ZeDoBip-Mobile/4.0 (user:${this.currentUser})`;
+      return `ZeDaEntrega-Mobile/1.0 (user:${this.currentUser})`;
     }
-    return "ZeDoBip-Mobile/4.0";
+    return "ZeDaEntrega-Mobile/1.0";
   }
 
   /**

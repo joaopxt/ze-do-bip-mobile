@@ -1,5 +1,5 @@
 /**
- * Contexts Module - Zé do Bip
+ * Contexts Module - Zé da Entrega
  * Export centralizado dos contexts
  */
 
@@ -7,5 +7,5 @@
 export { AuthProvider, useAuth } from './AuthContext';
 export type { AuthUsuario } from './AuthContext';
 
-// Guarda Context
-export { GuardaProvider, useGuardas } from './GuardaContext';
+// Entrega Context
+export { EntregaProvider, useEntrega } from './EntregaContext';

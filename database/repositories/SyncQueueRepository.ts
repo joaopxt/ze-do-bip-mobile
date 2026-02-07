@@ -1,5 +1,5 @@
 /**
- * SyncQueueRepository - Zé do Bip
+ * SyncQueueRepository - Zé da Entrega
  * Gerencia fila de ações offline para sincronização quando online
  */
 

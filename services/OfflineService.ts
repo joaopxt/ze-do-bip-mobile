@@ -1,5 +1,5 @@
 /**
- * Offline Service - Zé do Bip
+ * Offline Service - Zé da Entrega
  * Fallback mínimo quando a API de teste não estiver disponível
  */
 

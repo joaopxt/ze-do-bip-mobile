@@ -1,5 +1,5 @@
 /**
- * Database Module - Zé do Bip
+ * Database Module - Zé da Entrega
  * Export centralizado do módulo de banco de dados
  */
 

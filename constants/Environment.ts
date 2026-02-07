@@ -1,5 +1,5 @@
 /**
- * Configuração de Ambientes - Zé do Bip
+ * Configuração de Ambientes - Zé da Entrega
  * Sistema escalável para gerenciar múltiplos ambientes (teste, produção, desenvolvimento)
  *
  * IMPORTANTE: O sistema usa duas APIs diferentes:
