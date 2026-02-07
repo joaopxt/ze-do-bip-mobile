@@ -1,5 +1,5 @@
 /**
- * AuthContext - Zé do Bip
+ * AuthContext - Zé da Entrega
  * Context API para gerenciamento de autenticação com SQLite
  *
  * ESTRATÉGIA DE SESSÃO:

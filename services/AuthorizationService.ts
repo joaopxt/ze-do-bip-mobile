@@ -1,5 +1,5 @@
 /**
- * Authorization Service - Zé do Bip
+ * Authorization Service - Zé da Entrega
  * Service para gerenciamento de usuários e roles
  * Refatorado para usar HttpClient com Axios
  */

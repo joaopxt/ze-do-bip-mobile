@@ -1,5 +1,5 @@
 /**
- * AuthRepository - Zé do Bip
+ * AuthRepository - Zé da Entrega
  * CRUD para users e sessions no SQLite
  */
 

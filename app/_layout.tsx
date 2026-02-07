@@ -1,10 +1,10 @@
 /**
- * Layout Principal do App - Zé do Bip
+ * Layout Principal do App - Zé da Entrega
  * Configuração do Stack Navigator (Expo Router) + Providers
  */
 
 import { Colors } from "@/constants/Colors";
-import { AuthProvider, GuardaProvider } from "@/contexts";
+import { AuthProvider, EntregaProvider } from "@/contexts";
 import { ToastProvider } from "@/contexts/ToastContext";
 import { Stack } from "expo-router";
 import React from "react";
@@ -12,7 +12,7 @@ import React from "react";
 export default function RootLayout() {
   return (
     <AuthProvider>
-      <GuardaProvider>
+      <EntregaProvider>
         <ToastProvider>
           <Stack
             screenOptions={{
@@ -39,54 +39,16 @@ export default function RootLayout() {
               }}
             />
 
-            {/* Tela Home (Seleção de Módulo) */}
+            {/* Grupo autenticado */}
             <Stack.Screen
-              name="home"
+              name="(app)"
               options={{
-                title: "Módulos",
                 gestureEnabled: false,
-              }}
-            />
-
-            {/* Módulo Guardas (Dashboard) */}
-            <Stack.Screen
-              name="guardas/index"
-              options={{
-                title: "Guardas Disponíveis",
-                gestureEnabled: true,
-              }}
-            />
-
-            {/* Módulo Endereçamento */}
-            <Stack.Screen
-              name="enderecamento/index"
-              options={{
-                title: "Endereçamento",
-                gestureEnabled: true,
-              }}
-            />
-
-            {/* Módulo Painel de Controle */}
-            <Stack.Screen
-              name="painel/index"
-              options={{
-                title: "Painel de Controle",
-                gestureEnabled: true,
-              }}
-            />
-
-            {/* Tela de Leitura */}
-            <Stack.Screen
-              name="leitura/[guardaId]"
-              options={{
-                title: "Leitura de Produtos",
-                presentation: "card",
-                gestureEnabled: true,
               }}
             />
           </Stack>
         </ToastProvider>
-      </GuardaProvider>
+      </EntregaProvider>
     </AuthProvider>
   );
 }

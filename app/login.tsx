@@ -1,5 +1,5 @@
 /**
- * Tela de Login - Zé do Bip
+ * Tela de Login - Zé da Entrega
  * Autenticação com ze-backend usando JWT
  */
 
@@ -27,12 +27,10 @@ export default function LoginScreen() {
   const router = useRouter();
   const { showToast } = useToast();
 
-  // Forçar logout de todas as sessões antes de fazer novo login
   const handleForceLogin = async () => {
     try {
       setCarregando(true);
 
-      // Primeiro faz logout de todas as sessões
       const tryLogout = await logoutAll(cd_usuario.trim());
 
       if (!tryLogout) {
@@ -40,19 +38,15 @@ export default function LoginScreen() {
           "Falha ao desconectar outras sessões. Verifique sua senha ou conexão.",
           "error"
         );
-        // Se falhar o logout, não impede login? O usuário quer "Desconectar e Entrar".
-        // Se falhar desconexão, talvez não devesse logar.
-        // Mas vamos manter a lógica de bloquear o return se falhar.
         return;
       }
 
-      // Depois tenta login novamente
       const sucesso = await login({ cd_usuario: cd_usuario.trim(), senha });
 
       if (sucesso) {
         setCdUsuario("");
         setSenha("");
-        router.replace("/home");
+        router.replace("/(app)/carga");
       } else {
         showToast(
           "Falha ao fazer login após desconectar outras sessões",
@@ -80,20 +74,17 @@ export default function LoginScreen() {
       const sucesso = await login({ cd_usuario: cd_usuario.trim(), senha });
 
       if (sucesso) {
-        // Login bem-sucedido - navegar para home
         setCdUsuario("");
         setSenha("");
-        router.replace("/home");
+        router.replace("/(app)/carga");
       } else {
         showToast("Usuário ou senha inválidos", "error");
       }
     } catch (error) {
-      // Tratar mensagens de erro específicas
       const errorMessage =
         error instanceof Error ? error.message : "Erro inesperado";
 
       if (errorMessage.includes("já está logado")) {
-        // Usuário já está logado em outro dispositivo
         Alert.alert(
           "Sessão Ativa",
           "Você já está logado em outro dispositivo. Deseja desconectar as outras sessões e continuar?",
@@ -127,8 +118,13 @@ export default function LoginScreen() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.loginContainer}>
-        <Text style={styles.loginTitle}>Zé do Bip - Galpão</Text>
-        <Text style={styles.loginSubtitle}>Sistema de Guardas</Text>
+        {/* Header com identidade visual */}
+        <View style={styles.headerBadge}>
+          <Text style={styles.headerBadgeText}>GRUPO BUENO</Text>
+        </View>
+
+        <Text style={styles.loginTitle}>Zé da Entrega</Text>
+        <Text style={styles.loginSubtitle}>Sistema de Entregas e Coletas</Text>
 
         <View style={styles.loginForm}>
           <Input
@@ -161,6 +157,9 @@ export default function LoginScreen() {
             </View>
           )}
         </View>
+
+        {/* Versão */}
+        <Text style={styles.versionText}>v1.0.0</Text>
       </View>
     </SafeAreaView>
   );
@@ -177,11 +176,24 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 20,
   },
+  headerBadge: {
+    backgroundColor: Colors.primary,
+    paddingHorizontal: 16,
+    paddingVertical: 6,
+    borderRadius: 20,
+    marginBottom: 16,
+  },
+  headerBadgeText: {
+    color: Colors.textInverse,
+    fontSize: 12,
+    fontWeight: "700",
+    letterSpacing: 1.5,
+  },
   loginTitle: {
-    fontSize: 28,
+    fontSize: 32,
     fontWeight: "bold",
     color: Colors.primary,
-    marginBottom: 8,
+    marginBottom: 4,
   },
   loginSubtitle: {
     fontSize: 16,
@@ -191,21 +203,20 @@ const styles = StyleSheet.create({
   },
   loginForm: {
     width: "100%",
-    maxWidth: 300,
+    maxWidth: 320,
     gap: 16,
   },
   loginInput: {
-    marginBottom: 16,
+    marginBottom: 4,
   },
   loginButton: {
     marginTop: 8,
-  },
-  loginButtonDisabled: {
-    opacity: 0.6,
+    backgroundColor: Colors.primary,
   },
   loginButtonLoading: {
     marginTop: 8,
     opacity: 0.6,
+    backgroundColor: Colors.primary,
   },
   loadingContainer: {
     flexDirection: "row",
@@ -217,5 +228,11 @@ const styles = StyleSheet.create({
   loadingText: {
     fontSize: 14,
     color: Colors.textSecondary,
+  },
+  versionText: {
+    position: "absolute",
+    bottom: 20,
+    fontSize: 12,
+    color: Colors.gray[400],
   },
 });

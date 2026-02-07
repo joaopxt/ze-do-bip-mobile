@@ -1,5 +1,5 @@
 /**
- * Repositories Module - Zé do Bip
+ * Repositories Module - Zé da Entrega
  * Export centralizado dos repositories
  */
 
@@ -18,3 +18,5 @@ export type {
   SyncQueueItem,
   SyncStatus,
 } from "./SyncQueueRepository";
+
+export { default as EntregaRepository } from "./EntregaRepository";

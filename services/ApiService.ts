@@ -1,7 +1,7 @@
 /**
- * API Service - Zé do Bip
+ * API Service - Zé da Entrega (herdado do Zé do Bip)
  * Gateway principal para comunicação com APIs (teste/produção)
- * Refatorado para usar HttpClient com Axios
+ * Para endpoints de entrega, use EntregaApiService.ts
  */
 
 import { config, environmentInfo } from "../constants/Environment";
@@ -231,7 +231,7 @@ class ApiService {
    */
   getStatusConexao(): StatusConexao {
     // Por enquanto sempre tentamos online primeiro
-    // Fallback será implementado no GuardaService
+    // Fallback será implementado no EntregaContext
     return StatusConexao.ONLINE;
   }
 

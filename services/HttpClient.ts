@@ -46,7 +46,7 @@ function createHttpClient(clientConfig?: Partial<HttpClientConfig>): AxiosInstan
     timeout,
     headers: {
       "Content-Type": "application/json",
-      "User-Agent": "ZeDoBip-Mobile/1.0",
+      "User-Agent": "ZeDaEntrega-Mobile/1.0",
     },
   });
 

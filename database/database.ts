@@ -1,5 +1,5 @@
 /**
- * Inicialização do SQLite Database - Zé do Bip
+ * Inicialização do SQLite Database - Zé da Entrega
  * Gerencia conexão e migrations do banco de dados local
  */
 
@@ -7,7 +7,7 @@ import * as SQLite from 'expo-sqlite';
 import { Logger } from '../utils/logger';
 import { runMigrations } from './migrations';
 
-const DATABASE_NAME = 'ze-do-bip.db';
+const DATABASE_NAME = 'ze-da-entrega.db';
 
 let db: SQLite.SQLiteDatabase | null = null;
 
@@ -23,10 +23,10 @@ export async function getDatabase(): Promise<SQLite.SQLiteDatabase> {
   try {
     Logger.debug('[DATABASE] Abrindo banco de dados...');
     db = await SQLite.openDatabaseAsync(DATABASE_NAME);
-    
+
     // Executar migrations
     await runMigrations(db);
-    
+
     Logger.debug('[DATABASE] Banco de dados inicializado com sucesso');
     return db;
   } catch (error) {
@@ -59,10 +59,10 @@ export async function resetDatabase(): Promise<void> {
       await db.closeAsync();
       db = null;
     }
-    
+
     await SQLite.deleteDatabaseAsync(DATABASE_NAME);
     Logger.debug('[DATABASE] Banco de dados resetado');
-    
+
     // Reinicializar
     await getDatabase();
   } catch (error) {
@@ -72,5 +72,3 @@ export async function resetDatabase(): Promise<void> {
 }
 
 export { db };
-
-

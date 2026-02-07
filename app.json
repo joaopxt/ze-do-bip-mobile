@@ -1,28 +1,28 @@
 {
   "expo": {
-    "name": "Zé do Bip - Galpão",
-    "slug": "ze-do-bip",
-    "version": "1.0.7",
+    "name": "Zé da Entrega",
+    "slug": "ze-da-entrega",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "zedobeep",
+    "scheme": "zedaentrega",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
       "image": "./assets/images/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#1e40af"
+      "backgroundColor": "#1ba8a5"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.grupobueno.zedobip"
+      "bundleIdentifier": "com.grupobueno.zedaentrega"
     },
     "android": {
-      "package": "com.grupobueno.zedobip",
+      "package": "com.grupobueno.zedaentrega",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#1e40af"
+        "backgroundColor": "#1ba8a5"
       },
       "permissions": [
         "android.permission.CAMERA",
@@ -44,7 +44,7 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#1e40af"
+          "backgroundColor": "#1ba8a5"
         }
       ],
       [
